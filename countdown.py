@@ -13,6 +13,9 @@ def countdown(lst):
         lst[1] = 59
 
 t = input("Insert time to count down (h:m:s) ")
-t_lst = t.split(":")
-t_lst[0], t_lst[1], t_lst[2] = int(t_lst[0]), int(t_lst[1]), int(t_lst[2])
-countdown(t_lst)
+try:
+    t_lst = t.split(":")
+    t_lst[0], t_lst[1], t_lst[2] = int(t_lst[0]), int(t_lst[1]), int(t_lst[2])
+    countdown(t_lst)
+except:
+    print("Enter only numbers in the following form (h:m:s) ")
